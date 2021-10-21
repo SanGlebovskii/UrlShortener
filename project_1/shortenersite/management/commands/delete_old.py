@@ -7,4 +7,4 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         Url.objects.filter(created_at__lte=datetime.now()-timedelta(days=3)).delete()
-        self.stdout.write('Удалены ссылке старше 3 дней')
+        self.stdout.write('Удалены ссылки старше 3 дней')
